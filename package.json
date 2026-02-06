@@ -1,0 +1,35 @@
+{
+  "name": "cpuprofile-to-md",
+  "version": "0.1.0",
+  "description": "Convert V8 CPU profiles (.cpuprofile) to LLM-friendly Markdown for AI-assisted performance analysis",
+  "type": "module",
+  "main": "./src/index.ts",
+  "bin": {
+    "cpuprofile-to-md": "./src/cli.ts"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.ts",
+    "generate-profiles": "node test/generate-profiles.ts"
+  },
+  "engines": {
+    "node": ">=22.6.0"
+  },
+  "keywords": [
+    "cpuprofile",
+    "cpu-profile",
+    "v8",
+    "nodejs",
+    "performance",
+    "profiling",
+    "markdown",
+    "llm",
+    "ai"
+  ],
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/node": "^22.10.2"
+  }
+}
