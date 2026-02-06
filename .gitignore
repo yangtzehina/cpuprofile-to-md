@@ -4,5 +4,6 @@ dist/
 *.cpuprofile
 *.md
 !README.md
+!README.zh-CN.md
 .DS_Store
 *.tgz
