@@ -1,4 +1,4 @@
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { join, resolve, basename } from 'node:path';
 
 export interface SourceContext {
@@ -107,41 +107,34 @@ function findFile(filename: string, sourceDir: string): string | null {
   }
 
   // Try recursive search (simple implementation - could be optimized)
-  try {
-    const { readdirSync, statSync } = require('node:fs');
-    const { join } = require('node:path');
+  function search(dir: string, depth: number = 0): string | null {
+    if (depth > 10) return null; // Prevent infinite recursion
 
-    function search(dir: string, depth: number = 0): string | null {
-      if (depth > 10) return null; // Prevent infinite recursion
+    try {
+      const entries = readdirSync(dir, { withFileTypes: true });
 
-      try {
-        const entries = readdirSync(dir, { withFileTypes: true });
-
-        for (const entry of entries) {
-          if (entry.name === 'node_modules' || entry.name === '.git') {
-            continue;
-          }
-
-          const fullPath = join(dir, entry.name);
-
-          if (entry.isFile() && entry.name === filename) {
-            return fullPath;
-          }
-
-          if (entry.isDirectory()) {
-            const found = search(fullPath, depth + 1);
-            if (found) return found;
-          }
+      for (const entry of entries) {
+        if (entry.name === 'node_modules' || entry.name === '.git') {
+          continue;
         }
-      } catch {
-        // Ignore permission errors
-      }
 
-      return null;
+        const fullPath = join(dir, entry.name);
+
+        if (entry.isFile() && entry.name === filename) {
+          return fullPath;
+        }
+
+        if (entry.isDirectory()) {
+          const found = search(fullPath, depth + 1);
+          if (found) return found;
+        }
+      }
+    } catch {
+      // Ignore permission errors
     }
 
-    return search(resolvedDir);
-  } catch {
     return null;
   }
+
+  return search(resolvedDir);
 }

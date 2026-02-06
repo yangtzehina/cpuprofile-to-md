@@ -211,7 +211,18 @@ test('convert should support different format levels', () => {
   const detailed = convert(JSON.stringify(profileData), { format: 'detailed' });
   const adaptive = convert(JSON.stringify(profileData), { format: 'adaptive' });
   
+  // Summary format checks
   assert.ok(summary.includes('Summary'));
+  assert.ok(summary.includes('## Top Hotspots'));
+  assert.ok(summary.includes('| Rank | Function |'));
+  
+  // Detailed format checks
   assert.ok(detailed.includes('Detailed'));
+  assert.ok(detailed.includes('## Call Tree'));
+  assert.ok(detailed.includes('Text-based flame graph'));
+  
+  // Adaptive format checks
   assert.ok(adaptive.includes('Performance Analysis'));
+  assert.ok(adaptive.includes('## Executive Summary'));
+  assert.ok(adaptive.includes('→ Details'));
 });

@@ -35,7 +35,7 @@ export function formatDetailed(result: AnalysisResult, options: FormatOptions = 
   lines.push('');
   
   const hotspotKeys = new Set(result.hotspots.map(h => h.key));
-  renderCallTree(result.callTree, lines, hotspotKeys, 0);
+  renderCallTree(result.callTree, lines, hotspotKeys, 0, false);
   lines.push('');
 
   // Hotspot analysis
