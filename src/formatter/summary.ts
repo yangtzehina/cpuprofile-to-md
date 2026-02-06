@@ -1,4 +1,4 @@
-import type { AnalysisResult, FormatOptions } from '../types.js';
+import type { AnalysisResult, FormatOptions } from '../types.ts';
 import {
   formatDuration,
   formatTime,
@@ -7,7 +7,7 @@ import {
   escapeMarkdown,
   formatTableRow,
   createTableSeparator,
-} from './utils.js';
+} from './utils.ts';
 
 /**
  * Format analysis results as compact summary Markdown.

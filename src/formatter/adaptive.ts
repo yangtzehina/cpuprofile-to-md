@@ -1,4 +1,4 @@
-import type { AnalysisResult, FormatOptions } from '../types.js';
+import type { AnalysisResult, FormatOptions } from '../types.ts';
 import {
   formatDuration,
   formatTime,
@@ -8,8 +8,8 @@ import {
   generateAnchorId,
   formatTableRow,
   createTableSeparator,
-} from './utils.js';
-import { resolveSource } from '../source-resolver.js';
+} from './utils.ts';
+import { resolveSource } from '../source-resolver.ts';
 
 /**
  * Format analysis results as adaptive Markdown (default).

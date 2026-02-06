@@ -8,7 +8,7 @@ import type {
   CriticalPath,
   PathNode,
   FormatOptions,
-} from './types.js';
+} from './types.ts';
 
 interface AnalyzeOptions {
   hotspotThreshold?: number;

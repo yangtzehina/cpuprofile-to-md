@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { gunzipSync } from 'node:zlib';
-import type { V8CpuProfile, V8CpuProfileNode } from './types.js';
+import type { V8CpuProfile, V8CpuProfileNode } from './types.ts';
 
 /**
  * Parse a .cpuprofile file from various input formats.

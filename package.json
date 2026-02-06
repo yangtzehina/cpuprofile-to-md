@@ -11,8 +11,8 @@
     ".": "./src/index.ts"
   },
   "scripts": {
-    "test": "node --test test/*.test.ts",
-    "generate-profiles": "node test/generate-profiles.ts"
+    "test": "node --experimental-strip-types --test test/*.test.ts",
+    "generate-profiles": "node --experimental-strip-types test/generate-profiles.ts"
   },
   "engines": {
     "node": ">=22.6.0"

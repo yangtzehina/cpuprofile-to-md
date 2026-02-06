@@ -1,11 +1,11 @@
-import type { AnalysisResult, FormatOptions, CallTreeNode } from '../types.js';
+import type { AnalysisResult, FormatOptions, CallTreeNode } from '../types.ts';
 import {
   formatDuration,
   formatTime,
   formatLocation,
   formatPercent,
   escapeMarkdown,
-} from './utils.js';
+} from './utils.ts';
 
 /**
  * Format analysis results as detailed Markdown with full analysis.

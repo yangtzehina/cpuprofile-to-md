@@ -1,8 +1,8 @@
-#!/usr/bin/env node
+#!/usr/bin/env node --experimental-strip-types
 
 import { readFileSync, writeFileSync } from 'node:fs';
 import { parseArgs } from 'node:util';
-import { convert } from './index.js';
+import { convert } from './index.ts';
 
 const usage = `
 Usage: cpuprofile-to-md [options] <input.cpuprofile>

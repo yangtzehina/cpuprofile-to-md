@@ -1,7 +1,7 @@
-import type { AnalysisResult, FormatLevel, FormatOptions } from '../types.js';
-import { formatSummary } from './summary.js';
-import { formatDetailed } from './detailed.js';
-import { formatAdaptive } from './adaptive.js';
+import type { AnalysisResult, FormatLevel, FormatOptions } from '../types.ts';
+import { formatSummary } from './summary.ts';
+import { formatDetailed } from './detailed.ts';
+import { formatAdaptive } from './adaptive.ts';
 
 /**
  * Format analysis results to Markdown based on format level.

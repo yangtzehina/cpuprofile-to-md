@@ -16,19 +16,19 @@ export type {
   FormatLevel,
   FormatOptions,
   ConvertOptions,
-} from './types.js';
+} from './types.ts';
 
 // Re-export core functions
-export { parseProfile } from './parser.js';
-export { analyzeProfile } from './analyzer.js';
-export { format, formatSummary, formatDetailed, formatAdaptive } from './formatter/index.js';
-export { resolveSource } from './source-resolver.js';
+export { parseProfile } from './parser.ts';
+export { analyzeProfile } from './analyzer.ts';
+export { format, formatSummary, formatDetailed, formatAdaptive } from './formatter/index.ts';
+export { resolveSource } from './source-resolver.ts';
 
 // Main API
-import { parseProfile } from './parser.js';
-import { analyzeProfile } from './analyzer.js';
-import { format } from './formatter/index.js';
-import type { ConvertOptions } from './types.js';
+import { parseProfile } from './parser.ts';
+import { analyzeProfile } from './analyzer.ts';
+import { format } from './formatter/index.ts';
+import type { ConvertOptions } from './types.ts';
 
 /**
  * Convert a .cpuprofile to Markdown in one call.
