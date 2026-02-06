@@ -28,7 +28,7 @@
     "llm",
     "ai"
   ],
-  "license": "Apache-2.0",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^22.10.2"
   }

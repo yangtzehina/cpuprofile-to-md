@@ -181,7 +181,9 @@ node --experimental-strip-types src/cli.ts test/simple.cpuprofile
 
 ## 许可证
 
-Apache-2.0
+MIT 许可证 - 详见 [LICENSE](./LICENSE) 文件。
+
+本软件可供任何人自由使用。
 
 ## 贡献
 
