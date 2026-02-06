@@ -2,5 +2,7 @@ node_modules/
 dist/
 *.log
 *.cpuprofile
+*.md
+!README.md
 .DS_Store
 *.tgz
