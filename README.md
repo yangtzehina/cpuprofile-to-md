@@ -1,3 +1,5 @@
+[English](./README.md) | [简体中文](./README.zh-CN.md)
+
 # cpuprofile-to-md
 
 Convert V8 CPU profiles (`.cpuprofile`) to LLM-friendly Markdown for AI-assisted performance analysis.
