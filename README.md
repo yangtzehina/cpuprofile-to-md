@@ -181,7 +181,9 @@ node --experimental-strip-types src/cli.ts test/simple.cpuprofile
 
 ## License
 
-Apache-2.0
+MIT License - see [LICENSE](./LICENSE) file for details.
+
+This software is provided "as is" and can be freely used by anyone.
 
 ## Contributing
 
